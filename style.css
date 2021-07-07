@@ -1,0 +1,99 @@
+/* Variables */
+/* Style */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  color: #fff;
+  background: #212529;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+@media (min-width: 48em) {
+  .container {
+    padding: 5rem;
+  }
+}
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stopwatch__title {
+  font-size: 2rem;
+  margin: 0 0 4rem;
+}
+@media (min-width: 48em) {
+  .stopwatch__title {
+    font-size: 3rem;
+  }
+}
+.stopwatch__value {
+  font-size: 3rem;
+  margin: 0 0 2rem;
+}
+@media (min-width: 48em) {
+  .stopwatch__value {
+    font-size: 4rem;
+  }
+}
+.stopwatch__hundredths {
+  font-size: 2rem;
+}
+@media (min-width: 48em) {
+  .stopwatch__hundredths {
+    font-size: 3rem;
+  }
+}
+.stopwatch__controls {
+  display: flex;
+}
+.stopwatch__btn {
+  font-weight: 500;
+  padding: 0.33rem 0.5rem;
+  border: 2px solid currentColor;
+  border-radius: 0.125rem;
+  background: transparent;
+}
+.stopwatch__btn:not(:disabled) {
+  cursor: pointer;
+}
+.stopwatch__btn:disabled {
+  opacity: 0.2;
+}
+@media (min-width: 48em) {
+  .stopwatch__btn {
+    padding: 0.5rem 1rem;
+  }
+}
+.stopwatch__btn:not(:last-child) {
+  margin-right: 1rem;
+}
+.stopwatch__btn--start {
+  color: #c1fcc1;
+}
+.stopwatch__btn--stop {
+  color: #fcc1c4;
+}
+.stopwatch__btn--reset {
+  color: #fcf8c1;
+}
+
+/*# sourceMappingURL=style.css.map */

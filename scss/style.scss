@@ -1,0 +1,108 @@
+/* Variables */
+
+$breakpoint-md: 48em;
+
+
+/* Style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    color: #fff;
+    background: #212529;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+
+    @media (min-width: $breakpoint-md) {
+        padding: 5rem;
+    }
+}
+
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: 2rem;
+        margin: 0 0 4rem;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 3rem;
+        }
+    }
+
+    &__value {
+        font-size: 3rem;
+        margin: 0 0 2rem;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 4rem;
+        }
+    }
+
+    &__hundredths {
+        font-size: 2rem;
+
+        @media (min-width: $breakpoint-md) {
+            font-size: 3rem;
+        }
+    }
+
+    &__controls {
+        display: flex;
+    }
+
+    &__btn {
+        font-weight: 500;
+        padding: .33rem .5rem;
+        border: 2px solid currentColor;
+        border-radius: .125rem;
+        background: transparent;
+
+        &:not(:disabled) {
+            cursor: pointer;
+        }
+
+        &:disabled {
+            opacity: .2;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: .5rem 1rem;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &--start {
+            color: rgb(193, 252, 193);
+        }
+
+        &--stop {
+            color: rgb(252, 193, 196);
+        }
+
+        &--reset {
+            color: rgb(252, 248, 193);
+        }
+    }
+}

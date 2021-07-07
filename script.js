@@ -36,6 +36,7 @@
         if (!started) {
             lastTime = Date.now();
             interval = setInterval(update, 10);
+            resetBtn.setAttribute("disabled", "");
             started = true;
         }
     });
@@ -43,6 +44,7 @@
     stopBtn.addEventListener("click", () => {
         console.log("-- Stop");
         clearInterval(interval);
+        resetBtn.removeAttribute("disabled");
         started = false;
     });
 
